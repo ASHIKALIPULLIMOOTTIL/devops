@@ -11,7 +11,7 @@
 aws s3 ls
 
 #list ec2 instances
-aws ec2 describe-instances
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
 
 #list lambda
 aws lambda list-functions
